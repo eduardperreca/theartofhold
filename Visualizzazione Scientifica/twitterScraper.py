@@ -1,7 +1,6 @@
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
-import matplotlib.pyplot as plt
-
+import text2emotion as te
 
 query = "(from:CarloCalenda) since:2014-03-30 until:2022-11-08"
 
@@ -18,3 +17,4 @@ tweets_df = pd.DataFrame(tweets_list, columns=[
 
 # export to csv
 tweets_df.to_csv('tweetsCarletto.csv', index=False)
+
