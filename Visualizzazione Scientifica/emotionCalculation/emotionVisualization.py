@@ -5,7 +5,7 @@ from googletrans import Translator
 
 translator = Translator()
 # Read the data
-df = pd.read_csv(os.path.join(os.path.dirname(__file__), "../tweetsRenzi.csv"))
+df = pd.read_csv(os.path.join(os.path.dirname(__file__), "../tweetsSalvini.csv"))
 
 # Initialize the list of emotions counters
 countTot = 0
