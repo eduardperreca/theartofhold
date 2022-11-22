@@ -54,7 +54,7 @@ x_ = np.linspace(x.min(), x.max(), 300)
 y_ = cubic_interpolation_model(x_)
 
 plt.plot(x_, y_, color = "red")
-plt.title("Percentuale votanti per referendum")
+plt.title("Percentuale affluneza referendum dal 1974 al 2022")
 plt.xlabel("Anno")
 plt.ylabel("Percentuale votanti")
 plt.show()
