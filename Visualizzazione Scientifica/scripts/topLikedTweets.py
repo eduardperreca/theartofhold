@@ -13,6 +13,8 @@ for i in os.listdir(os.path.join(os.path.dirname(__file__), "../tweetPolitic")):
         "user": i.split(".")[0],
         "numb": df["Likes"].max()
     })
+    print(df["Likes"].max())
+    print(df.sort_values(by=["Likes"], ascending=False).head(1)["Text"].values[0])
 
 # sort
 
