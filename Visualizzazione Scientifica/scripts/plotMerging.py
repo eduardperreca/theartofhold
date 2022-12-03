@@ -84,6 +84,6 @@ x5_ = np.linspace(x5.min(), x5.max(), 300)
 y5_ = cubic_interpolation_model(x5_)
 plt.plot(x5_, y5_, color="c")
 
-plt.legend(["Centro Destra", "Altro", "Centro Puro", "Centro Sinistra"])
+plt.legend(["Centro Destra", "Centro Puro", "Centro Sinistra", "wtf"])
 
 plt.show()
