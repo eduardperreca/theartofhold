@@ -25,3 +25,4 @@ plt.figure(figsize=(20, 10))
 plt.bar([i["user"] for i in liked_most], [i["numb"] for i in liked_most])
 plt.xticks(rotation=90)
 plt.show()
+

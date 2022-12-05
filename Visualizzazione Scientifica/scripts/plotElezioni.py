@@ -4,13 +4,6 @@ import os
 from scipy.interpolate import interp1d
 import numpy as np
 
-
-import matplotlib.pyplot as plt
-import pandas as pd
-import os
-from scipy.interpolate import interp1d
-import numpy as np
-
 # read csv
 dictYears = {}
 
