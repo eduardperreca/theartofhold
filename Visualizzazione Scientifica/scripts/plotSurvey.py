@@ -20,4 +20,5 @@ y = np.array([dictReplies[i] for i in dictReplies.keys()])
 
 plt.pie(y, autopct='%1.1f%%')
 plt.title("Rappresentatività della politica attuale")
+plt.legend(dictReplies.keys(), loc="best")
 plt.show()
