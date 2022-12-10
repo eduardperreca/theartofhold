@@ -44,7 +44,7 @@ plt.bar(x_axis + 0.1, yConte, 0.1, label="Conte")
 plt.bar(x_axis + 0.2, yLetta, 0.1, label="Letta")
 
 plt.xticks(x_axis, x)
-plt.xlabel("Year")
+plt.xlabel("Years")
 plt.ylabel("Number of Tweets")
 plt.title("Number of Tweets in each year")
 plt.legend()
