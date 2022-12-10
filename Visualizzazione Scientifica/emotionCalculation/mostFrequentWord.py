@@ -16,9 +16,10 @@ for i in os.listdir(os.path.join(os.path.dirname(__file__), "../tweetPolitic")):
 
     text = df["Text"]
     wordcloud = WordCloud(
-        width=1800,
-        height=3000,
-        background_color='white'
+        width=1080,
+        height=1920,
+        background_color='white',
+        colormap = 'Reds',
     ).generate(str(text))
 
     plt.imshow(wordcloud)

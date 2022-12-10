@@ -3,12 +3,11 @@ import pandas as pd
 import os
 from scipy.interpolate import interp1d
 import numpy as np
+import plotly.graph_objects as go
 
 df = pd.read_csv(os.path.join(os.path.dirname(__file__),
                               "../dataset/affluenze/merged.csv"))
-
-
-# listPartiti = []
+listPartiti = []
 
 # for i in df["LISTA"].unique():
 #     listPartiti.append(i)
@@ -46,6 +45,7 @@ for i in df["LISTA"].unique():
 
 df["check"] = df["LISTA"].map(dictCheck)
 
+
 dictCheck = {}
 for i, row in df.iterrows():
     dictCheck[row["year"]] = {
@@ -58,99 +58,43 @@ for i, row in df.iterrows():
 for i, row in df.iterrows():
     dictCheck[row["year"]][row["check"]] += row["PERCENTUALE"]
 
-for key, value in dictCheck.items():
-    print(key, value)
+# for key, value in dictCheck.items():
+#     print(key, value)
 
-dictCheck = dict(sorted(dictCheck.items()))
+# dictCheck = dict(sorted(dictCheck.items()))
 
-y = np.array([dictCheck[i]["centroDestra"] for i in dictCheck.keys()])
-x = np.array([i for i in dictCheck.keys()])
-cubic_interpolation_model = interp1d(x, y, kind="cubic")
-x_ = np.linspace(x.min(), x.max(), 200)
-y_ = cubic_interpolation_model(x_)
-plt.plot(x_, y_, color="b")
+# y = np.array([dictCheck[i]["centroDestra"] for i in dictCheck.keys()])
+# x = np.array([i for i in dictCheck.keys()])
+# cubic_interpolation_model = interp1d(x, y, kind="cubic")
+# x_ = np.linspace(x.min(), x.max(), 200)
+# y_ = cubic_interpolation_model(x_)
+# plt.plot(x_, y_, color="b")
 
-# y2 = np.array([dictCheck[i]["centroSinistra"] for i in dictCheck.keys()])
-# x2 = np.array([i for i in dictCheck.keys()])
-# cubic_interpolation_model = interp1d(x2, y2, kind="cubic")
-# x2_ = np.linspace(x2.min(), x2.max(), 200)
-# y2_ = cubic_interpolation_model(x2_)
-# plt.plot(x2_, y2_, color="r")
+# # y2 = np.array([dictCheck[i]["centroSinistra"] for i in dictCheck.keys()])
+# # x2 = np.array([i for i in dictCheck.keys()])
+# # cubic_interpolation_model = interp1d(x2, y2, kind="cubic")
+# # x2_ = np.linspace(x2.min(), x2.max(), 200)
+# # y2_ = cubic_interpolation_model(x2_)
+# # plt.plot(x2_, y2_, color="r")
 
-y3 = np.array([dictCheck[i]["centroPuro"] for i in dictCheck.keys()])
-x3 = np.array([i for i in dictCheck.keys()])
-cubic_interpolation_model = interp1d(x3, y3, kind="cubic")
-x3_ = np.linspace(x3.min(), x3.max(), 200)
-y3_ = cubic_interpolation_model(x3_)
-plt.plot(x3_, y3_, color="g")
+# y3 = np.array([dictCheck[i]["centroPuro"] for i in dictCheck.keys()])
+# x3 = np.array([i for i in dictCheck.keys()])
+# cubic_interpolation_model = interp1d(x3, y3, kind="cubic")
+# x3_ = np.linspace(x3.min(), x3.max(), 200)
+# y3_ = cubic_interpolation_model(x3_)
+# plt.plot(x3_, y3_, color="g")
 
-# y5 = np.array([dictCheck[i]["altro"] for i in dictCheck.keys()])
-# x5 = np.array([i for i in dictCheck.keys()])
-# cubic_interpolation_model = interp1d(x5, y5, kind="cubic")
-# x5_ = np.linspace(x5.min(), x5.max(), 200)
-# y5_ = cubic_interpolation_model(x5_)
-# plt.plot(x5_, y5_, color="c")
-
-plt.title("Paragone evoluzione tra CDX e Centro Puro")
-plt.xlabel("Anno")
-plt.ylabel("Percentuale voti")
-plt.legend(["Centro Destra", "Centro Puro"])
-
-plt.show()
+# # y5 = np.array([dictCheck[i]["altro"] for i in dictCheck.keys()])
+# # x5 = np.array([i for i in dictCheck.keys()])
+# # cubic_interpolation_model = interp1d(x5, y5, kind="cubic")
+# # x5_ = np.linspace(x5.min(), x5.max(), 200)
+# # y5_ = cubic_interpolation_model(x5_)
+# # plt.plot(x5_, y5_, color="c")
 
 
-# altro = ["VITA"]
+# plt.title("Paragone evoluzione tra CDX e Centro Puro")
+# plt.xlabel("Anno")
+# plt.ylabel("Percentuale voti")
+# plt.legend(["Centro Destra", "Centro Puro"])
 
-# ["", '', '', '',
-#  '', '', '', ' , "", '',
-#  '', '', 'SUD CHIAMA NORD', '', '',
-#  , 'MASTELLA NOI DI CENTRO EUROPEISTI', '', '',
-#  "ALTERNATIVA PER L'ITALIA - NO GREEN PASS", 'PARTITO DELLA FOLLIA CREATIVA', 'FORZA DEL POPOLO', 'FREE', '', '', '',
-#  '', "", '', '', '', '', '',
-#  '', 'ITALIA AGLI ITALIANI', 'PARTITO COMUNISTA', 'PARTITO VALORE UMANO', '10 VOLTE MEGLIO', 'PER UNA SINISTRA RIVOLUZIONARIA',
-#  'PARTITO REPUBBLICANO ITALIANO - ALA', 'GRANDE NORD', 'AUTODETERMINATZIONE', 'LISTA DEL POPOLO PER LA COSTITUZIONE', "PATTO PER L'AUTONOMIA",
-#  "BLOCCO NAZIONALE PER LE LIBERTA'", 'SIAMO', 'RINASCIMENTO MIR', 'ITALIA NEL CUORE', "FI -FRAT. D'IT. -MOV.NUOVA VALLE D'AOSTA", 'PD-UV-UVP-EPAV',
-#  'POUR TOUS PER TUTTI PE TCHEUT', 'RISPOSTA CIVICA', '', "", ",
-#  '', "", '', "", '', 'FARE PER FERMARE IL DECLINO', 'LA DESTRA',
-#  '', " 'GRANDE SUD - MPA', , 'PARTITO COMUNISTA DEI LAVORATORI', 'FORZA NUOVA', 'MIR - MODERATI IN RIVOLUZIONE',
-#  'DEMOCRAZIA ATEA', '', "", ', "",
-#  '', 'SINISTRA CRITICA', 'ASS.DIFESA DELLA VITA ABORTO?NO,GRAZIE', 'PER IL BENE COMUNE', 'P.LIBERALE ITALIANO',
-#  'UNIONE DEMOCRATICA PER I CONSUMATORI', 'LISTA DEI GRILLI PARLANTI', 'M.E.D.A.', "LEGA PER L'AUTONOMIA ALL.LOMB. LEGA PENS", 'UNION FUR SUD TIROL',
-#  'SARDIGNA NATZIONE', 'LEGA SUD', "L'INTESA VENETA", 'IL LOTO', "", 'ALLEANZA NAZIONALE', '', 'LA ROSA NEL PUGNO', 'COMUNISTI ITALIANI',
-#  '', 'U.D.EUR POPOLARI', '', 'ALTERNATIVA SOCIALE MUSSOLINI', 'I SOCIALISTI ', 'PROGETTO NORDEST', 'LISTA CONSUMATORI',
-#  'NO EURO', 'ALLEANZA LOMBARDA AUTONOMIA', 'PENSIONATI UNITI', 'LIGA FRONTE VENETO', 'AMBIENTA-LISTA', 'TERZO POLO', 'IRS', 'S.O.S. ITALIA', "SOLIDARIETA'",
-#  'MOV.DEM.SIC-NOI SIC.', 'PER IL SUD', 'MOVIMENTO TRIVENETO', 'DIMENSIONE CHRISTIANA', 'DESTRA NAZIONALE', '', '',
-#  'LISTA DI PIETRO', '', 'DEMOCRAZIA EUROPEA', '', '', 'NUOVO PSI', "PS D'AZ-SARD.NATZ.", 'PAESE NUOVO', 'ABOLIZIONE SCORPORO',
-#  "LEGA D'AZIONE MERIDIONALE", 'FRONTE NAZIONALE', 'VERDI-VERDI', 'LISTA AMADU', 'REPUBBLICANI EUROPEI', 'NOI SICILIANI', 'LIBERI E FORTI', 'SOCIAL.AUTON.',
-#  "MOVIMENTO DELLE LIBERTA'", 'LIBDEM.BASTA', 'COMUNISMO', 'TERZO POLO AUTONOMIA', '', '', '', '',
-#  'MOV.SOC.TRICOLORE', 'SOCIALISTA', 'UNIONE NORD EST', 'MANI PULITE', 'NOI SICILIANI-FNS', "GR.INDIP.LIBERTA'", 'AMBIENTALISTI', 'PART.UMANISTA', 'RINNOVAMENTO',
-#  "PATTO PER L'AGRO", 'MOV.RIN.IT.', 'MOV.AUT.TOSCANO', 'PART.LEGGE NATURALE', 'NUOVA DEMOCRAZIA', 'DEMOCRAZIA SOCIALE', 'FEDERALISTI LIBERALI', 'PER LE MARCHE',
-#  'NUOVE ENERGIE', "SVILUPPO-LEGALITA'", 'NORD LIBERO AUT.', 'PART.FEDERAL.', 'RISORGIMENTO DEL SUD',
-#  'P.POPOLARE ITALIANO', 'PATTO SEGNI', '', , '', '', 'SOCIALDEMOCRAZIA', 'PROGRAMMA ITALIA',
-#  'LEGA ALPINA LUMBARDA', 'LEGA AUT.VENETA', 'UN.POP.', 'SOLID.OCCUPAZ.SVILUP', 'PARTIDU INDIP.', 'UNIONE DEM.ITALIANA', 'UN.CRIST.RIF.', "PATTO SOLIDARIETA'",
-#  'LG.ANGELA BOSSI', 'LEGA PER IL PIEMONTE', 'ALL.MERIDIONALE', 'ADA', 'ALL.POP.', 'INIZIATIVA POP.DEM.', "L'ARCA", 'RIN.SALENTINA', 'MOV.CRIST.DEM.',
-#  'SOLID.PROGRESSO', 'INSIEME PER SVILUPPO', 'LISTA FRANCO GRECO', 'RINASCITA SOCIALISTA', "DEM.E SOLIDARIETA'", 'UNIONE MEDITERRANEA', 'MOV.MERIDIONALE',
-#  'DEMOCRAZIA SICILIANA', 'MOV.CATTOLICO DEM.', 'RIFORMISTI IRPINI', 'P.DEM.', "ALL.MUNICIPALITA'", 'UTOPIA', 'MOV.REP.', 'MOV.CRIST.VERITAS', 'RIN.DEMOCRATICO',
-#  'LIBERAL DEM.EUROPEI', 'INSIEME PER CAMBIARE', 'P.POP.PROGRESSISTA', 'MEDITERRANEO', 'MOV.LIBERALDEM.SOC.', 'ALL.PROGRAMMA', 'MOV.POP.CRIST.', 'MOV.EUR.LIB.CRIST.',
-#  "IDEA CITTA'", 'AUTONOMIA SOCIALISTA', 'ALL.PER I CASTELLI', '', 'DEM.E RINNOVAMENTO', 'LEGA LOMBARDA', '', ,
-#  'LISTA REFERENDUM', 'PPST', 'CPA', 'FEDERALISMO-PENS.UV.', 'LA LEGA CAS-PENS.', 'LEGA ALPINA PIEMONT', 'MOV.VEN.REG.AUT', 'UNION VENETO', 'VERDI FEDERALISTI',
-#  "L.VALLE D'AOSTA", 'LG.LOMB.EUR.T.LIB.', 'GRUPPO DOLCHI-FOSSON', 'LEGA DELLE LEGHE', 'PART.AMORE', 'PIEMONT LIBER', 'MOV.POL.DIF.AUTOMOB.', 'LEGA MARCHE',
-#  'LEGA LAZIO', 'E.ROMAGNA-LG PADANA', 'C.S.T.', 'P.CRIST.DEMOCRAZIA', "LEGA MERID.D'IT.", 'PART.EUROPA 2000', 'VIVERE INSIEME', 'PART.GIUSTIZIALISTA',
-#  'MOV.EUR.AUTOMOB.', 'LG.NAZ.PROTESTA', 'LG.MERID.UN.NAZ.', 'P.RAD', 'LISTA VERDE', 'DEM.PROL', 'LIGA VENETA-PU', 'PIEMONT-AUT.REG.', 'PIEMONT',
-#  'UV-ADP-PRI', '', 'MOV.LIB.FISCALE', 'ALL.PENS.', 'P.VERDE I.VER.E.', 'MOV.NAZ.IT.CACC.', 'PNI-CACCIA PESCA', 'MOV.FRIULI', 'PART.SUD.TIROL',
-#  'VERDI IT.-P.ECOL', 'ALL.UM.', 'NPP', 'GIUST. E LIB.', 'PART.NAZ.INQ.', 'RINASCITA SIC.', 'MOV.IND.TLT', 'PART.NAZ.PENS.', 'LIGA VENETA', 'LISTA PER TRIESTE',
-#  'UV-UVP-D.POP.', 'PPTT', 'UN.DIF.PENS.', 'PART.MON.NAZ.', 'UN.PEN.PENS.IT.', 'UNIONE SLOVENA', 'POE', 'LISTA DI LOTTA', 'PART.CRIST.AZ.SOC.', 'VIV.LIB.',
-#  'FR.NAZ.SIC.', 'MOV.ECOL.SARDO', , 'NUOVA SINISTRA', 'PDUP', 'NUOVA SIN.UNITA', 'DN-CD', 'UNIONE VALDOSTANA-DEMPROL-PLI', 'UNITA DELLA SINISTRA',
-#  '', 'PARTITO POPOLARE ITALIANO', 'FRONTE GIUST.SIC.', 'PART.BEN.CIV.', 'PART.POP.CALAB.', 'ASS.VAL.IND', 'FIORE MARGHERITA', 'PART.SIN.DEM.',
-#  '', 'DC-RV-UV-UVP-PRI', 'DEM.POP-UVP M.REG', 'TIROL.',  'PSIUP', 'MANIFESTO', 'MOV.POL.LAV.', 'PC(MARX-LEN)IT', '', 'DEM.POP.',
-#  'PAPI', 'STELLA ROSSA-R.S.', 'AZ.CR.POP.', 'RINN.DEM.NAZ.', 'PCS (MARX.-LEN.)', 'UN.FORZE DEM.', 'PART.AGRICOLTORI', 'FR.UOMO QUALUNQUE', 'PSU', 'PDIUM',
-#  'NUOVA REPUBBLICA', 'UV', 'MOV.SOC.', 'PST.PROG.SOC.', 'UN.NAZ.SAL.PUB.', 'RAG.VOL."T"', 'PART.ORD.ECON.', 'PART.DEM.PROG.', 'RAGGR.ITAL.', 'P.COM.RIVOL.',
-#  'RIS.POP.', 'SACRO IDEAL.MONDO', 'P.PROG.UNSIPO', 'PART.NAZ.MUT.COMB.IT', "CONC.UNITA'RURALE", 'M.COMB.IT-FR.RIN.NAZ', 'MOV.POL.CATT.IT.', 'PART.SOC.CRIST.',
-#  'L.UNIT.SLOV.', 'MOV.COLT.E SAL.', 'RINN.SOC.', 'MOV.POP.IT.', 'AV.NAZ.', 'PART.LAB.IT.', 'P.MONARCHICO POP.', 'P.NAZ.MONARCHICO', , "COMUNITA'",
-#  'MOVIM.AUT.REG.-M.A.R.P.', 'P.CAT.RIS.NAZ.CPI', 'FED.AUT.SOCIALDEM.IT', 'P.NAZIONALE LAVORO', 'AUT.PIEMONT-MOV.VIL.', 'UNIONE TRIESTINA', "FR.DELL'INDIPENDENZA",
-#  'MOV.PRO PENSIONATI', 'FR.UNICO SOLDATO IT.', 'CONC.EUROPEA DEMOC.', 'MOV.INDIP.DIVORZISTI', 'P.SOC.SICILIANO', 'MOV.NAZIONALE IT.', 'MOV.AZIONE-RINNOVAM.',
-#  'MOV.ECONOMICO IT.SOC', 'P.IT.MUT.INV.GUERRA', '', "", '', 'P.NAZ.MON.ALL.D.LAV.', 'PPST-PPTT',
-#  "P.CONTADINI D'ITALIA", 'PARTITO CRISTIANO SOCIALE', 'MOV.NAZ.DEM.SOC.', 'UN.MOV.FEDERALISTI', 'BLOCCO POP.UNIONISTA', 'ALTRE LISTE', 'PC.INTERNAZIONALISTA',
-#  'FR.DEM.PROG.REPUB.', 'CONC.NAZ.COMBAT.UNIT', 'P.DEMOLABURISTA IT.', 'P.INDIPENDENTE CONTADINI', 'P.DEM.IND.PENSIONATI', 'AS.NAZ.CONG.DIS.GUER',
-#  "P.PATRIA E LIBERTA'", 'FR.DEGLI ITALIANI', 'CONC.RUR.IND.AOSTA', 'GR.POL.LA DESTRA', 'FR.ANTIBOLSCEVICO IT', 'UN.SOCIAL.INDIP.', 'RAGGRUP.POP.ITALIANO',
-#  'MAGLIO', 'CONF.IT.LIBERI SIND.', "MOV.UNITA'D'IT.", 'FR.UN.ANTICOM.RIS.N.', 'M.NAZ.SIN.DAN.GUERRA', 'LEGA SARDA', 'M.CAT.IND.PAX JUSTIT', 'P.ESISTENZIALISTA IT']
+# plt.show()

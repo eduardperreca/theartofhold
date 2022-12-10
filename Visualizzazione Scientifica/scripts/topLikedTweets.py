@@ -13,8 +13,10 @@ for i in os.listdir(os.path.join(os.path.dirname(__file__), "../tweetPolitic")):
         "user": i.split(".")[0],
         "numb": df["Likes"].max()
     })
-    print(df["Likes"].max())
-    print(df.sort_values(by=["Likes"], ascending=False).head(1)["Text"].values[0])
+
+    df = df.sort_values(by=["Likes"], ascending=False)
+    print(df.sort_values(by=["Likes"], ascending=False).head(
+        1)["Text"].values[0])
 
 # sort
 
@@ -25,4 +27,3 @@ plt.figure(figsize=(20, 10))
 plt.bar([i["user"] for i in liked_most], [i["numb"] for i in liked_most])
 plt.xticks(rotation=90)
 plt.show()
-
