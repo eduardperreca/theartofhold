@@ -1,5 +1,5 @@
 # Mindset
-
+![mind](https://cdn.discordapp.com/attachments/633947157673672714/1066738914225823866/teste.png)
 ## The Power of Mindset: Unlocking Your Potential as an Entrepreneur
 
 ### Understanding Your Mindset:

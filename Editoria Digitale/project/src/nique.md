@@ -1,4 +1,5 @@
-# Sneaker Game
+# 1. Sneaker Game
+![photo](https://cdn.discordapp.com/attachments/633947157673672714/1066738301295415296/tipo.png)
 ## What is reselling and how does it work?
 
 ### Introduction to the Sneaker Game
