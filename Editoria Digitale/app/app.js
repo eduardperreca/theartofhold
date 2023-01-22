@@ -202,6 +202,22 @@ app.get("/404", (req, res) => {
   res.render("404");
 });
 
+app.get("/:id", (req, res) => {
+  let listEndpoints = [
+    "login",
+    "register",
+    "dashboard",
+    "logout",
+    "1/quiz",
+    "2/quiz",
+    "3/quiz",
+    "4/quiz",
+  ];
+  if (listEndpoints.includes(req.params.id) == false) {
+    res.redirect("/404");
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}/`);
 });

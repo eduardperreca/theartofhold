@@ -17,7 +17,7 @@
                     <p class="subTitleNav">E-Learning Platform</p>
                 </div>
                 <div class="col-lg-4 d-flex justify-content-center my-auto">
-                    <a href="/" class="navbarHTLink2 mr main-navbar-link">Quiz Passed: </a>
+                    <a href="/" class="navbarHTLink2 mr main-navbar-link" id="quiz">Quiz Passed: </a>
                 </div>
                 <div class="col-lg-4 my-auto d-flex align-items-center justify-content-end">
                     <a class="navbarHTLink2"> Welcome back <span class="navbarHTLink3">{{name}}</span></a>
@@ -35,7 +35,7 @@
                                 <div class="col-lg-8">
                                     <div class="row my-auto">
                                         {{#if this.solved}}
-                                        <div class="col-lg-3 my-auto mx-auto">
+                                        <div class="col-lg-3 true my-auto mx-auto">
                                             <i class="fas fa-check-circle" height="500"></i>
                                         </div>
                                         {{else}}
@@ -65,6 +65,11 @@
     </div>
 
 
-
 </body>
+<script>
+    const dummy = document.getElementsByClassName('true');
+    const count = dummy.length;
+    const quiz = document.getElementById('quiz');
+    quiz.innerHTML = "Quiz Passed: "+ count + "/4";
+</script>
 </html>
