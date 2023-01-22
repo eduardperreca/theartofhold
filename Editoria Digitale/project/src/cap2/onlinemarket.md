@@ -15,5 +15,5 @@ In the online market, there are also various sites for large reselling stores, s
 ## Conclusion
 The online market, in conclusion, is the most balanced market in terms of prices, especially for those who can find what they're looking for. For less experienced people, however, it could be a ruin, as there are many sharks behind computers. The advice is to always stay well-informed about prices, release date, quantities, information, and restocks. It's important to build your own credibility online as it's the business card that opens many doors. Having a well-curated profile with positive feedback will help you in the long run.
 
-| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 5 |
+| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 2 |
 | --- |
