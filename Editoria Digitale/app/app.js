@@ -110,14 +110,14 @@ app.post("/register", async (req, res) => {
           name: "chapter 2 - functions",
           question: "What is the difference between a variable and a constant?",
           answer: "A variable can be changed, a constant cannot.",
-          solved: false,
+          solved: true,
           chapter_id: 2,
         },
         chapter3: {
           name: "chapter 3 - functions",
           question: "What is the difference between a variable and a constant?",
           answer: "A variable can be changed, a constant cannot.",
-          solved: false,
+          solved: true,
           chapter_id: 3,
         },
         chapter4: {
