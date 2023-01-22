@@ -119,7 +119,15 @@ app.post("/register", async (req, res) => {
 });
 
 app.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+  if (req.cookies.token) {
+    res.render("dashboard", {
+      name: req.user.name,
+      email: req.user.email,
+      refId: req.user.refId,
+      });
+  } else {
+    res.redirect("/login");
+  }
 });
 
 app.listen(PORT, () => {

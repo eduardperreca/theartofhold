@@ -8,3 +8,4 @@
 >I am sure that from now on, you will have an extra gear in the reselling business, the knowledge contained in this book will not be everything you need to know about reselling, but it will certainly make you profitable in this business.<div style="text-align: right"> Gratefully, Eduardo.</div>
 
 
+w
