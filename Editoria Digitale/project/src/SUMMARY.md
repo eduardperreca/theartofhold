@@ -1,6 +1,7 @@
 # Summary
 [**ciao**]
-[**Introduction**](./interlude.md)
+[**Welcome**](./welcome.md)
+[**Interlude**](./interlude.md)
 [**My History**](./start.md)
 - [Snkears Game](./chapter1.md)
     - [History of the nique](./nique.md)
