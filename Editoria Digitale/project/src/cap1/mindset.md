@@ -12,5 +12,5 @@ Change is inevitable and can be scary, but it's important to approach it with an
 ### Unlocking Your Potential:
 The ability to adapt to change, overcome obstacles and stay motivated is the key to success. By understanding and mastering your mindset, you can unlock your full potential and reach new heights in your business and personal life. So, don't wait any longer, take control of your mindset and start your journey towards success today."
 
-| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 5 |
+| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 11 |
 | --- |
