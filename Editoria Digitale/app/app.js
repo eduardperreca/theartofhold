@@ -51,6 +51,7 @@ app.post("/login", async (req, res) => {
               name: user.name,
               email: user.email,
               refId: user.refId,
+              questions: user.questions,
             },
             process.env.JWT_SECRET,
             {
@@ -61,7 +62,7 @@ app.post("/login", async (req, res) => {
             httpOnly: true,
             maxAge: 1000 * 60 * 60,
           });
-          return res.status(200).redirect("/?loggedin=true");
+          return res.status(200).redirect("/dashboard");
         } else {
           return res.status(400).render("login", {
             message: "Please provide an email and password",
@@ -96,6 +97,37 @@ app.post("/register", async (req, res) => {
           message: "That email is already in use",
         });
       }
+
+      const questions = {
+        chapter1: {
+          name: "chapter 1 - functions",
+          question: "What is the difference between a variable and a constant?",
+          answer: "A variable can be changed, a constant cannot.",
+          solved: false,
+          chapter_id: 1,
+        },
+        chapter2: {
+          name: "chapter 2 - functions",
+          question: "What is the difference between a variable and a constant?",
+          answer: "A variable can be changed, a constant cannot.",
+          solved: false,
+          chapter_id: 2,
+        },
+        chapter3: {
+          name: "chapter 3 - functions",
+          question: "What is the difference between a variable and a constant?",
+          answer: "A variable can be changed, a constant cannot.",
+          solved: false,
+          chapter_id: 3,
+        },
+        chapter4: {
+          name: "chapter 4 - functions",
+          question: "What is the difference between a variable and a constant?",
+          answer: "A variable can be changed, a constant cannot.",
+          solved: false,
+          chapter_id: 4,
+        },
+      };
       const refId = Math.floor(Math.random() * 100000000000000000);
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(password, salt);
@@ -104,6 +136,7 @@ app.post("/register", async (req, res) => {
         email,
         password: hashedPassword,
         refId,
+        questions,
       });
       await user.save();
       console.log(user);
@@ -119,15 +152,38 @@ app.post("/register", async (req, res) => {
 });
 
 app.get("/dashboard", (req, res) => {
-  if (req.cookies.token) {
-    res.render("dashboard", {
-      name: req.user.name,
-      email: req.user.email,
-      refId: req.user.refId,
-      });
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        console.log("thats", questions);
+        if (req.query.loggedin == "true") {
+          return res.render("dash", { id, name, questions });
+        } else {
+          return res.render("dash", { id, name, questions });
+        }
+      }
+    });
   } else {
-    res.redirect("/login");
+    return res.redirect("/login");
   }
+});
+
+app.get("/logout", (req, res) => {
+  res.clearCookie("token");
+  res.redirect("/login");
+});
+
+app.get("/404", (req, res) => {
+  res.render("404");
 });
 
 app.listen(PORT, () => {
