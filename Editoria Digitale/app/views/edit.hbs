@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,  shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="border-down">
+        <div class="container pd-60">
+            <div class="row w-100 mx-0 py-3">
+                <div class="col-lg-4 my-auto">
+                    <p class="subTitleNav">StockCheck</p>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center my-auto">
+                    <a href="/" class="navbarHTLink mr main-navbar-link">Add Item</a>
+                    <a href="/edit" class="navbarHTLink  main-navbar-link">Edit Stock</a>
+                    <a href="/dash/{{refId}}" target="_blank" class="navbarHTLink ml main-navbar-link">Live Page</a>
+                </div>
+                <div class="col-lg-4 my-auto d-flex align-items-center justify-content-end">
+                    <a class="navbarHTLink2"> Welcome back <span class="navbarHTLink3">{{name}}</span></a>
+                    <a href="/logout" class="buttonLogout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pd-60">
+        <div class="row">
+                <div class="col-lg-12">
+                    {{#if edited}}
+                        <div class="putain4 text-center" id="test">
+                            Successully edited
+                        </div>
+                    {{/if}}
+                    <div class="putainEdit">
+                        <div class="row">
+                            <div class="col-lg-12 mb-1">
+                                <h1 class="title text-center">Edit Stock</h1>    
+                                <hr class="divider ">
+                            </div>
+                        </div>
+                        {{#each data}}
+                        <div class="putainListing">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row my-auto">
+                                        <div class="col-lg-3">
+                                            <img src="{{this.product_image}}" class="imgShow">
+                                            <p class=" fill text-center mt-3 subTitle">Sale ID: {{this.buyId}}</p>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="col-lg-12">
+                                                <h1 class="titleEdit">{{this.product_name}}</h1>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <p class="subTitle">Sku Product: <b>{{this.product_sku}}</b></p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <p class="subTitle">Sizes Needed: <b>{{this.product_sizes}}</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-auto">
+                                    <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <form method="POST" class="text-center" action="/edit/step">
+                                            <input type="hidden" name="product_sizes" value="{{this.product_sizes}}" id="product_pid">
+                                            <input type="hidden" name="product_name" value="{{this.product_name}}" id="product_name">
+                                            <input type="hidden" name="product_image" value="{{this.product_image}}" id="product_image">
+                                            <input type="hidden" name="product_sku" value="{{this.product_sku}}" id="product_sku">
+                                            <button type="submit" class="buttonEdit">Edit</button>
+                                        </form>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-lg-12 mt-2">
+                                        <form method="POST" action="/delete">
+                                            <input type="hidden" name="product_sku" value="{{this.product_sku}}" id="product_sku">
+                                            <button type="submit" class="buttonDelete ">Delete</button>
+                                        </form>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+         </div>       
+    </div>
+
+    <script src="js/function.js"></script>
+    <script>
+        test = document.getElementById('test');
+        setTimeout(function(){
+            test.style.display = 'none';
+        }, 1500);
+    </script>
+</body>
+</html>
