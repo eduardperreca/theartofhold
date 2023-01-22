@@ -32,7 +32,6 @@
     - [Events](./cap4/events.md)
     - [Social](./cap4/social.md)
     - [Strategy Sell](./cap4/strategy.md)
-    - [Negotation](./cap4/negotiation.md)
     - [Fake Shoes](./cap4/fake.md)
     - [What let prices increse?](./cap4/pricegrowth.md)
 - [Conclusion](./conclusion.md)
