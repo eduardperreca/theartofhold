@@ -36,4 +36,4 @@
     - [Negotation](./cap4/negotiation.md)
     - [Fake Shoes](./cap4/fake.md)
     - [What let prices increse?](./cap4/pricegrowth.md)
-- [Ending](./ending.md)
+- [Conclusion](./conclusion.md)

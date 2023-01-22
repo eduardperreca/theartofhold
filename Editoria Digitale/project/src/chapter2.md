@@ -1,3 +1,4 @@
 # Markets
+![market](https://cdn.discordapp.com/attachments/633947157673672714/1066728521453535242/market.png)
 ## Brief Description
 > In this chapter, we explore the differences between the various sneaker markets around the world. We delve into the unique characteristics of the Asian market, including the impact of brand loyalty and cultural trends. We also examine the European market, and how it differs from the American market in terms of consumer behavior and purchasing habits. Additionally, we discuss the growing influence of online marketplaces and how they are shaping the future of sneaker reselling. This chapter provides readers with a comprehensive understanding of the nuances of each market and how to navigate them effectively.

@@ -1,4 +1,5 @@
 # My History
+![dummy](https://cdn.discordapp.com/attachments/633947157673672714/1066727542486208532/yzydummy.png)
 ## Before analyzing the new world of Resell in detail, it is important to introduce the story of Eduardo, the protagonist of this modern game that was born in 2016.
 
 ### Who is the main character?
