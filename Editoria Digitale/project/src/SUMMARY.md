@@ -1,5 +1,4 @@
 # Summary
-[**ciao**]
 [**Welcome**](./welcome.md)
 [**Interlude**](./interlude.md)
 [**My History**](./start.md)
