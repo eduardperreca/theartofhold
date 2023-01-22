@@ -177,6 +177,22 @@ app.get("/dashboard", (req, res) => {
   }
 });
 
+app.get("/1/quiz", (req, res) => {
+  res.send("quiz");
+});
+
+app.get("/2/quiz", (req, res) => {
+  res.send("quiz");
+});
+
+app.get("/3/quiz", (req, res) => {
+  res.send("quiz");
+});
+
+app.get("/4/quiz", (req, res) => {
+  res.send("quiz");
+});
+
 app.get("/logout", (req, res) => {
   res.clearCookie("token");
   res.redirect("/login");
