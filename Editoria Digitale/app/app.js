@@ -111,29 +111,36 @@ app.post("/register", async (req, res) => {
       const questions = {
         chapter1: {
           name: "Chapter 1 - Sneaker Game",
-          question: "What is the right mindset to have when you are starting out?",
-          answer: "The right mindset is proactive with regards to risk. You should be willing to take risks and learn from your mistakes.",
+          question:
+            "What is the right mindset to have when you are starting out?",
+          answer:
+            "The right mindset is proactive with regards to risk. You should be willing to take risks and learn from your mistakes.",
           solved: false,
           chapter_id: 1,
         },
         chapter2: {
-          name: "chapter 2 - functions",
-          question: "What is the difference between a variable and a constant?",
-          answer: "A variable can be changed, a constant cannot.",
-          solved: true,
+          name: "Chapter 2 - Markets",
+          question: "In which market can the most expensive shoes be found?",
+          answer:
+            "The luxury shoe market, such as high-end department stores and designer boutiques, typically offers the most expensive shoes.",
+          solved: false,
           chapter_id: 2,
         },
         chapter3: {
-          name: "chapter 3 - functions",
-          question: "What is the difference between a variable and a constant?",
-          answer: "A variable can be changed, a constant cannot.",
-          solved: true,
+          name: "Chapter 3 - How to Buy",
+          question:
+            "What is the most important factor to consider when buying shoes?",
+          answer:
+            "It's also important to consider the current market price of the shoes before making a purchase to avoid overpaying.",
+          solved: false,
           chapter_id: 3,
         },
         chapter4: {
-          name: "chapter 4 - functions",
-          question: "What is the difference between a variable and a constant?",
-          answer: "A variable can be changed, a constant cannot.",
+          name: "Chapter 4 - How to Sell",
+          question:
+            "What is the most important factor to consider when selling shoes?",
+          answer:
+            "To increase the chances of selling a pair of shoes, it's important to provide detailed photographs and accurate descriptions of the shoes, and to use multiple selling platforms to reach a wider audience.",
           solved: false,
           chapter_id: 4,
         },
