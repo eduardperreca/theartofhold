@@ -98,23 +98,42 @@ Per lo sviluppo di "The Art of Hold" sono state utilizzate le seguenti tecnologi
 |                |Riduzione dei tempi di gestione                          |Miglioramento della qualità dei documenti                         |
 |----------------|-------------------------------|-----------------------------|
 |Markdown |`'Isn't this fun?'`            |'Isn't this fun?'            |
-|XSLT       |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|ePud         |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+|HTML&CSS      |`"Isn't this fun?"`            |"Isn't this fun?"            |
+| JavaScript |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+| mdbook |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+| Video e Immagini |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+| Git |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+
 
 ## Conclusioni
-lorem ipsum
-lorem ipsum
-lorem ipsum
-lorem ipsum
-lorem ipsum
+I risultati ottenuti dal contenuto di "The Art of Hold" sono stati pienamente raggiunti, chiaramente molto deve essere migliorato, ma piú nello specifico possiamo riassumere:
 
+### Esplorazione della nicchia
+-   Per quanto riguarda l'esplorazione del mercato secondario dei prodotti limitati, fornendo informazioni accurate e dettagliate su come funziona il mercato, si può considerare che questo obiettivo sia stato raggiunto.
+
+
+### User Experience
+-   Per quanto riguarda l'offerta di un'esperienza immersiva attraverso contenuti interattivi come video e immagini pertinenti ai singoli capitoli, essendo stati creati con cura e sono pertinenti al testo del libro, si può considerare che questo obiettivo sia stato raggiunto.
+
+### Piattaforma E-learning
+-   Per quanto riguarda la piattaforma e-learning personalizzata per rafforzare e confermare le informazioni apprese durante la lettura, essendo ben sviluppata e funzionale, si può considerare che questo obiettivo sia stato raggiunto.
+>chiaramente si puó sempre fare meglio!
+
+### Web app 
+-   Per quanto riguarda la creazione di una webapp interattiva e user-friendly utilizzando mdbook, possiamo ritenere l'obiettivo soddisfatto, in quanto tramite la tencologia markdown integrata con mdbook, otteniamo un contenuto di facile mantenibilitá e progettazione, l'unico problema é l'integrazione di script lato markdown.
+
+### Apprendimento
+-   Per quanto riguarda il raggiungimento degli obiettivi di apprendimento del libro, per creare un'esperienza unica e particolare e fare sentire il lettore seguito, la modalitá di inclusione dell'esperienza dell'autore integrata con 
+### Contenuti interattivi
+-   Il problema che si potrebbe avere per quanto riguarda i contenuti interattivi sono molteplici, tra cui abbiamo la deprecabilitá dei contenuti, i diritti di essi (nonostante stiano all'interno del fair use)
 
 ## Futuri svolgimenti
-lorem ipsum
-lorem ipsum
-lorem ipsum
-lorem ipsum
-lorem ipsum
+
+### Distribuzione del prodotto
+
+### Vendite
+
+### Community
 
 ## Bibliografia e sitografia
 
