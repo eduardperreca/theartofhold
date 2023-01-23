@@ -17,7 +17,7 @@
                     <p class="subTitleNav">E-Learning Platform</p>
                 </div>
                 <div class="col-lg-4 d-flex justify-content-center my-auto">
-                    <a href="/" class="navbarHTLink2 mr main-navbar-link" id="quiz">Quiz Passed: </a>
+                    <a href="/" class="navbarHTLink2 mr main-navbar-link" id="quiz">Quiz Started!</a>
                 </div>
                 <div class="col-lg-4 my-auto d-flex align-items-center justify-content-end">
                     <a class="navbarHTLink2"> Welcome back <span class="navbarHTLink3">{{name}}</span></a>
@@ -36,12 +36,36 @@
                         </div>
                     </div>
                 <form method="POST" action="/api/1/check" id="form">
-                      <input type="radio" id="html" name="answer" value="HTML">
-                      <label for="html" class="subtitle">No, you shold keep a bearish mindset</label><br>
-                      <input type="radio" id="css" name="answer" value="CSS">
-                      <label for="css" class="subtitle">No, you should be able to risk all your money without any regret</label><br>
-                      <input type="radio" class="subtitle" id="javascript" name="answer" value="{{answer}}">
-                      <label for="javascript" class="subtitle">{{answer}}</label>
+                    <div class="mb-5">
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">The sneaker reselling industry began in the 1980s
+</div>
+                    </label>
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">The most important thing to consider when buying sneakers to resell is their style and design
+</div>
+                    </label>
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">The streetwear culture is not important in the sneaker reselling industry
+</div>
+                    </label>
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer" value="{{answer}}">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">{{answer}}</div>
+                    </label>
+
+                    </div>
                     <button class="buttonForm" type="submit">Submit form</button>
                 </form>
                 </div>
@@ -53,7 +77,7 @@
     const dummy = document.getElementsByClassName('true');
     const count = dummy.length;
     const quiz = document.getElementById('quiz');
-    quiz.innerHTML = "Quiz Passed: "+ count + "/4";
+    quiz.innerHTML = "Quiz Started!";
 </script>
 <script>
 

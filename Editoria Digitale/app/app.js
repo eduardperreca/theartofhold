@@ -115,6 +115,8 @@ app.post("/register", async (req, res) => {
             "What is the right mindset to have when you are starting out?",
           answer:
             "The right mindset is proactive with regards to risk. You should be willing to take risks and learn from your mistakes.",
+          description:
+            "An overview of the sneaker reselling industry, including its history and current state.",
           solved: false,
           chapter_id: 1,
         },
@@ -123,6 +125,8 @@ app.post("/register", async (req, res) => {
           question: "In which market can the most expensive shoes be found?",
           answer:
             "The luxury shoe market, such as high-end department stores and designer boutiques, typically offers the most expensive shoes.",
+          description:
+            "An in-depth look at the various markets where sneakers can be bought and sold, including online marketplaces and local shops.",
           solved: false,
           chapter_id: 2,
         },
@@ -132,6 +136,8 @@ app.post("/register", async (req, res) => {
             "What is the most important factor to consider when buying shoes?",
           answer:
             "It's also important to consider the current market price of the shoes before making a purchase to avoid overpaying.",
+          description:
+            "Tips and strategies for finding and purchasing sneakers to resell, including verifying authenticity and considering market prices.",
           solved: false,
           chapter_id: 3,
         },
@@ -141,6 +147,8 @@ app.post("/register", async (req, res) => {
             "What is the most important factor to consider when selling shoes?",
           answer:
             "To increase the chances of selling a pair of shoes, it's important to provide detailed photographs and accurate descriptions of the shoes, and to use multiple selling platforms to reach a wider audience.",
+          description:
+            "Strategies for pricing and selling sneakers, including using multiple platforms and providing detailed descriptions and photographs.",
           solved: false,
           chapter_id: 4,
         },
@@ -189,7 +197,8 @@ app.get("/dashboard", (req, res) => {
             console.log(user);
             name = user[0].name;
             questions = user[0].questions;
-            res.render("dash", { name, id, questions });
+            description = user[0].description;
+            res.render("dash", { name, id, questions, description });
           }
         });
       }
@@ -201,6 +210,7 @@ app.get("/dashboard", (req, res) => {
 
 app.post("/api/1/check", (req, res) => {
   const { answer } = req.body;
+  console.log(answer);
   let cookie = req.headers.cookie;
   console.log(req.query);
   if (cookie) {

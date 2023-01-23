@@ -17,7 +17,7 @@
                     <p class="subTitleNav">E-Learning Platform</p>
                 </div>
                 <div class="col-lg-4 d-flex justify-content-center my-auto">
-                    <a href="/" class="navbarHTLink2 mr main-navbar-link" id="quiz">Quiz Passed: </a>
+                    <a href="/" class="navbarHTLink2 mr main-navbar-link" id="quiz">Quiz Started! </a>
                 </div>
                 <div class="col-lg-4 my-auto d-flex align-items-center justify-content-end">
                     <a class="navbarHTLink2"> Welcome back <span class="navbarHTLink3">{{name}}</span></a>
@@ -36,13 +36,34 @@
                         </div>
                     </div>
                 <form method="POST" action="/api/2/check" id="form">
-                        <input type="radio" id="html" name="answer" value="HTML">
-                      <label for="html" class="subtitle">HTML</label><br>
-                      <input type="radio" id="css" name="answer" value="CSS">
-                      <label for="css" class="subtitle">CSS</label><br>
-                      <input type="radio" class="subtitle" id="javascript" name="answer" value="{{answer}}">
-                      <label for="javascript" class="subtitle">{{answer}}</label>
-                    <button class="buttonForm" type="submit">Submit form</button>
+                    <div class="mb-5">
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">The main market for reselling shoes is online, specifically on websites like Vintage Websites with no authentications or guarantees.</div>
+                    </label>
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">Local markets, such as sneaker shops and second-hand markets, can't be sources for finding shoes to resell.</div>
+                    </label>
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">Facebook groups and messaging apps like WhatsApp are also places where deals on resellable shoes can be found.</div>
+                    </label>
+
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="answer" value="{{answer}}">
+                        <div class="rad-design"></div>
+                        <div class="rad-text">{{answer}}</div>
+                    </label>
+
+                    </div>                   
+                     <button class="buttonForm" type="submit">Submit form</button>
                 </form>
                 </div>
             </div>       
@@ -53,7 +74,7 @@
     const dummy = document.getElementsByClassName('true');
     const count = dummy.length;
     const quiz = document.getElementById('quiz');
-    quiz.innerHTML = "Quiz Passed: "+ count + "/4";
+    quiz.innerHTML = "Quiz Started!";
 </script>
 <script>
 

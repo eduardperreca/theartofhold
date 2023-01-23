@@ -1269,6 +1269,110 @@ body{
     font-weight: bold;
   }
   
+/* DEFAULTS */
+/* =============================================== */
+
+/* MAIN */
+/* =============================================== */
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.buttonInfo{
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  text-align: center;
+  text-decoration: none;
+  border:none;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: rgb(0, 0, 0);
+}
+.buttonInfo:focus{
+  cursor: auto;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  outline: none;
+}
+.buttonInfo:hover{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.buttonInfo:active{
+  cursor: auto;
+  outline:none;
+}
+
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, .14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 40%);
+}
+
+
   .user_display{
     width: 98%;
     float: left;
