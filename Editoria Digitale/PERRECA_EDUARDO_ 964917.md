@@ -139,4 +139,3 @@ I risultati ottenuti dal contenuto di "The Art of Hold" sono stati pienamente ra
 
 ## Bibliografia e sitografia
 
-Elencare i riferimenti bibliografici e risorse online che hanno maggiormente contribuito alla realizzazione del progetto.
