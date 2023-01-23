@@ -116,8 +116,9 @@ I risultati ottenuti dal contenuto di "The Art of Hold" sono stati pienamente ra
 -   Per quanto riguarda l'offerta di un'esperienza immersiva attraverso contenuti interattivi come video e immagini pertinenti ai singoli capitoli, essendo stati creati con cura e sono pertinenti al testo del libro, si può considerare che questo obiettivo sia stato raggiunto.
 
 ### Piattaforma E-learning
--   Per quanto riguarda la piattaforma e-learning personalizzata per rafforzare e confermare le informazioni apprese durante la lettura, essendo ben sviluppata e funzionale, si può considerare che questo obiettivo sia stato raggiunto.
+-   Per quanto riguarda la piattaforma e-learning personalizzata per rafforzare e confermare le informazioni apprese durante la lettura, essendo ben sviluppata e funzionale, si può considerare che questo obiettivo sia stato raggiunto. 
 >chiaramente si puó sempre fare meglio!
+
 
 ### Web app 
 -   Per quanto riguarda la creazione di una webapp interattiva e user-friendly utilizzando mdbook, possiamo ritenere l'obiettivo soddisfatto, in quanto tramite la tencologia markdown integrata con mdbook, otteniamo un contenuto di facile mantenibilitá e progettazione, l'unico problema é l'integrazione di script lato markdown.
