@@ -199,30 +199,6 @@ app.get("/dashboard", (req, res) => {
   }
 });
 
-app.get("/1/quiz", (req, res) => {
-  let cookie = req.headers.cookie;
-  console.log(req.query);
-  if (cookie) {
-    let token = cookie.split("=")[1];
-    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-      if (err) {
-        return res.redirect("/login");
-      } else {
-        decoded = jwt.decode(token);
-        id = decoded.refId;
-        name = decoded.name;
-        questions = decoded.questions;
-        question = questions.chapter1.question;
-        answer = questions.chapter1.answer;
-        console.log("thats", question);
-        res.render("quiz1", { name, id, question, answer });
-      }
-    });
-  } else {
-    return res.redirect("/login");
-  }
-});
-
 app.post("/api/1/check", (req, res) => {
   const { answer } = req.body;
   let cookie = req.headers.cookie;
@@ -259,6 +235,139 @@ app.post("/api/1/check", (req, res) => {
   }
 });
 
+app.post("/api/2/check", (req, res) => {
+  const { answer } = req.body;
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        question = questions.chapter2.question;
+        if (answer == questions.chapter2.answer) {
+          questions.chapter1.solved = true;
+          User.findOneAndUpdate(
+            { refId: id },
+            { questions: questions },
+            (err, doc) => {
+              if (err) {
+                console.log("Something wrong when updating data!");
+              }
+              console.log(doc, "updated");
+            }
+          );
+          res.redirect("/dashboard?done=true");
+        } else {
+          res.redirect("/1/quiz");
+        }
+      }
+    });
+  }
+});
+
+app.post("/api/3/check", (req, res) => {
+  const { answer } = req.body;
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        question = questions.chapter3.question;
+        if (answer == questions.chapter3.answer) {
+          questions.chapter1.solved = true;
+          User.findOneAndUpdate(
+            { refId: id },
+            { questions: questions },
+            (err, doc) => {
+              if (err) {
+                console.log("Something wrong when updating data!");
+              }
+              console.log(doc, "updated");
+            }
+          );
+          res.redirect("/dashboard?done=true");
+        } else {
+          res.redirect("/1/quiz");
+        }
+      }
+    });
+  }
+});
+
+
+app.post("/api/4/check", (req, res) => {
+  const { answer } = req.body;
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        question = questions.chapter4.question;
+        if (answer == questions.chapter4.answer) {
+          questions.chapter1.solved = true;
+          User.findOneAndUpdate(
+            { refId: id },
+            { questions: questions },
+            (err, doc) => {
+              if (err) {
+                console.log("Something wrong when updating data!");
+              }
+              console.log(doc, "updated");
+            }
+          );
+          res.redirect("/dashboard?done=true");
+        } else {
+          res.redirect("/1/quiz");
+        }
+      }
+    });
+  }
+});
+
+app.get("/1/quiz", (req, res) => {
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        question = questions.chapter1.question;
+        answer = questions.chapter1.answer;
+        console.log("thats", question);
+        res.render("quiz1", { name, id, question, answer });
+      }
+    });
+  } else {
+    return res.redirect("/login");
+  }
+});
+
 app.get("/2/quiz", (req, res) => {
   let cookie = req.headers.cookie;
   console.log(req.query);
@@ -272,14 +381,15 @@ app.get("/2/quiz", (req, res) => {
         id = decoded.refId;
         name = decoded.name;
         questions = decoded.questions;
-
-        res.render("quiz2", { name, id, questions });
+        question = questions.chapter2.question;
+        answer = questions.chapter2.answer;
+        console.log("thats", question);
+        res.render("quiz2", { name, id, question, answer });
       }
     });
   } else {
     return res.redirect("/login");
-  }
-});
+  }});
 
 app.get("/3/quiz", (req, res) => {
   let cookie = req.headers.cookie;
@@ -294,14 +404,15 @@ app.get("/3/quiz", (req, res) => {
         id = decoded.refId;
         name = decoded.name;
         questions = decoded.questions;
-
-        res.render("quiz3", { name, id, questions });
+        question = questions.chapter3.question;
+        answer = questions.chapter3.answer;
+        console.log("thats", question);
+        res.render("quiz3", { name, id, question, answer });
       }
     });
   } else {
     return res.redirect("/login");
-  }
-});
+  }});
 
 app.get("/4/quiz", (req, res) => {
   let cookie = req.headers.cookie;
@@ -316,14 +427,15 @@ app.get("/4/quiz", (req, res) => {
         id = decoded.refId;
         name = decoded.name;
         questions = decoded.questions;
-
-        res.render("quiz4", { name, id, questions });
+        question = questions.chapter4.question;
+        answer = questions.chapter4.answer;
+        console.log("thats", question);
+        res.render("quiz4", { name, id, question, answer });
       }
     });
   } else {
     return res.redirect("/login");
-  }
-});
+  }});
 
 app.get("/logout", (req, res) => {
   res.clearCookie("token");
