@@ -102,20 +102,19 @@ Per lo sviluppo di "The Art of Hold" sono state utilizzate le seguenti tecnologi
 |ePud         |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 ## Conclusioni
+lorem ipsum
+lorem ipsum
+lorem ipsum
+lorem ipsum
+lorem ipsum
 
-I risultati ottenuti verificando se gli obiettivi di "The Art of Hold" sono stati pienamente raggiunti dipenderanno dalla qualità del libro e dalla sua efficacia nel raggiungere gli obiettivi prefissati.
 
-Per quanto riguarda l'esplorazione del mercato secondario dei prodotti limitati, se il libro fornisce informazioni accurate e dettagliate su come funziona il mercato, si può considerare che questo obiettivo sia stato raggiunto.
-
-Per quanto riguarda l'offerta di un'esperienza immersiva attraverso contenuti interattivi come video e immagini pertinenti ai singoli capitoli, se questi contenuti sono stati creati con cura e sono pertinenti al testo del libro, si può considerare che questo obiettivo sia stato raggiunto.
-
-Per quanto riguarda la piattaforma e-learning personalizzata per rafforzare e confermare le informazioni apprese durante la lettura, se la piattaforma è ben sviluppata e funzionale, si può considerare che questo obiettivo sia stato raggiunto.
-
-Per quanto riguarda la creazione di una webapp interattiva e user-friendly utilizzando mdbook, se la webapp è ben progettata e facile da usare, si può considerare che questo obiettivo sia stato raggiunto.
-
-Per quanto riguarda il raggiungimento degli obiettivi di apprendimento del libro, per creare un'esperienza unica e particolare e fare sentire il lettore seguito al 100% nel suo breve ma intenso percorso, questo dipende dall'efficacia del libro nell'educare e fornire un'esperienza formativa completa.
-
-In ogni caso, si potrebbero aver limitazioni sui contenuti interattivi, sulla qualità dei quiz e test, sull'usabilità e la navigabilità della webapp, sull'accuratezza e la completezza delle informazioni fornite, sull'efficacia nell'educare e formare il lettore.
+## Futuri svolgimenti
+lorem ipsum
+lorem ipsum
+lorem ipsum
+lorem ipsum
+lorem ipsum
 
 ## Bibliografia e sitografia
 
