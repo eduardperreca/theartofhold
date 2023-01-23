@@ -1,20 +1,22 @@
 # My History
 ![dummy](https://cdn.discordapp.com/attachments/633947157673672714/1066727542486208532/yzydummy.png)
-## Before analyzing the new world of Resell in detail, it is important to introduce the story of Eduardo, the protagonist of this modern game that was born in 2016.
+## Introduction
+Introducing the story of Eduardo, the protagonist in the modern world of reselling.
 
-### Who is the main character?
-Eduardo, born in 2000, at the young age of fifteen discovered the Yeezy 350 Belaauga v1, which is one of the shoes that is part of the Kanye West collection. Eduardo immediately fell in love with the product, so he began researching online about the stores available for sale, but he was faced with a sad reality: the only sellers were private individuals with prices that were not insignificant (about 700 euros compared to the list price of 200 in store).
+## The rise of Eduardo in the Resell world
+Eduardo, born in 2000, discovered the Yeezy 350 Beluga v1 at the young age of 15. He fell in love with the product and began researching online for available stores to purchase from. However, he faced a harsh reality that the only sellers were private individuals with inflated prices.
 
-Over time, the result of the research did not change, and the reality that Eduardo was facing was becoming increasingly harsh. One day, however, he met a friend who was wearing those very Yeezy Beluga shoes on his feet! Without wasting any time, Eduardo immediately contacted him, asking him the necessary questions so that he could also make the purchase.
+## The struggles of finding the perfect pair
+Eduardo's research did not yield any positive results, until one day he met a friend wearing the coveted Yeezy Beluga shoes. He immediately contacted the friend and was introduced to the world of Facebook groups, where the streetwear community had its roots and trades were made daily.
 
-The path that was recommended to him was that of the existing groups on the well-known social media site Facebook, where the streetwear community actually had its earliest roots, where only adolescents used to gather. Once he joined that group, Eduardo got a firsthand look at what the Sneaker game was all about, where trades were made daily and information about the Yeezy Beluga was infinite.
+## Discovering the streetwear community
+Eduardo's intentions shifted from just wanting to own a pair of shoes, to being a part of the coveted but "hidden" sales circle within the Facebook community.
 
-From that moment on, however, Eduardo's intentions changed: it was not just about owning that pair of shoes, but about being part of that coveted but at the same time "hidden" sales circle under the veil of the most widely used social media site in the world.
+## The birth of a new hobby
+In February 2017, Eduardo made his first resell sale, buying a pair of Yeezy Bred for 220 euros and reselling them for 450 euros. This marked the beginning of a new hobby for him.
 
-The first sale came in February 2017, when he bought a pair of Yeezy Bred for 220 euros, borrowed from his father, and resold them for 450 euros. The market price was actually a bit higher, but as a first sale, in an entirely unexpected "business" context, it was already the beginning of something much bigger!
+## Embracing the adventure
+Eduardo fully embraced the reselling adventure, visiting stores, entering raffles, and buying from sellers outside of stores. He also built a team of classmates to help him in his endeavor.
 
-Like any teenager, the first dream he realized was to buy the Yeezy Beluga, at the modest price of 450 euros from a well-known seller in San Babila, but from that moment on, something began to change.
-
-Eduardo decided to fully embrace this adventure, so he visited stores, entered raffles, signed up for online raffles, bought from the guys right in front of the stores: nothing to be surprised about, because that's how it all starts!
-
-His team became his classmates, because it is much more likely to achieve something if you are many: anything you decide to start, you should never do it alone!
+## Building a team for success
+Eduardo realized that it is much more likely to achieve success with a team, and encourages anyone looking to start a new venture to never do it alone.
