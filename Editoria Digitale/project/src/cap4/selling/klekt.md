@@ -19,3 +19,6 @@ After accepting the sale conditions, the item will remain visible until it is pu
 
 ## Shipping Sneakers on Klekt
 It is recommended to take care when packing the sneakers in their boxes, to avoid damage during the shipping. The sneakers, as well as clothing items, sold on KLEKT must be DS and authentic. As for the box, slight dents or small damages are accepted, which can happen when a shoe is shipped.
+
+## Extra content: How Klekt legit check works?
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UgnXq1H7tP0/0.jpg)](https://www.youtube.com/watch?v=UgnXq1H7tP0)

@@ -13,3 +13,6 @@ To be able to buy on StockX there are two different methods. The first, called "
 
 ## StockX's Restrictions and Regulations
 In this case, the sale also works in the same way: direct or with an auction, which can last from a few hours to entire weeks. StockX, in this case, will select the highest price that has been proposed, and the seller can choose to accept it or not. On the platform, it is not possible to sell used products, so only DS pieces. In the event that this rule is violated, StockX will keep the product for itself, and the seller will be forced to pay 15% on the amount they would have received. In fact, when the seller sends their product, they do not have to send it directly to the customer, but must send it to the StockX administrative offices, which will thoroughly check that everything follows the parameters.
+
+## Extra content: Stockx Why so hated?
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/XcdmptyNgjA/0.jpg)](https://www.youtube.com/watch?v=XcdmptyNgjA)

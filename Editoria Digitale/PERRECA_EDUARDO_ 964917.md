@@ -14,7 +14,7 @@
 
 ## Obiettivi 
 
-**I destinatari** principali di "The Art of Hold" sono coloro che sono interessati al mercato secondario dei prodotti limitati. Questo include persone che sono interessate a comprare, vendere o semplicemente scoprire di più sui prodotti di lusso e di nicchia, come ad esempio orologi, borse, scarpe, abbigliamento, gadget e molto altro. Potrebbe anche interessare a chi è interessato ad aumentare la propria conoscenza sui mercati e l'investimento in generale.
+**I destinatari** principali di "The Art of Hold" sono coloro che sono interessati al **mercato secondario dei prodotti limitati**. Questo include persone che sono interessate a comprare, **vendere** o semplicemente **scoprire di più sui prodotti di lusso e di nicchia**, come ad esempio **orologi**, **borse**, **scarpe**, **abbigliamento**, gadget e molto altro. Potrebbe anche interessare a chi è interessato ad aumentare la propria conoscenza sui **mercati** e l'**investimento** in generale.
 
 
 Gli **obiettivi** principali di "The Art of Hold" sono:
@@ -48,7 +48,7 @@ Gli **elementi** di **originalità** di "The Art of Hold" sono:
 
 Per realizzare "The Art of Hold" sono state sviluppate le seguenti attività:
 
--   **Ricerca**: l'autore potrebbe aver condotto ricerche sul mercato secondario dei prodotti limitati per raccogliere informazioni e dati per il libro.
+-   **Ricerca**: vengono inizialmente condotte delle ricerche sul mercato secondario dei prodotti limitati per raccogliere informazioni e dati per stilare i vari capitoli del libro.
 
 -   **Scrittura**: l'autore potrebbe aver scritto il testo del libro, organizzando le informazioni raccolte in modo coerente e facilmente comprensibile per i lettori.
 
@@ -130,8 +130,9 @@ I risultati ottenuti dal contenuto di "The Art of Hold" sono stati pienamente ra
 
 ## Futuri svolgimenti
 
-### Distribuzione del prodotto
 
+### Distribuzione del prodotto
+-   In ottica di distribuzione del prodotto sarebbe ottimo stilare un piano per coordinare produttori e venditori 
 ### Vendite
 
 ### Community

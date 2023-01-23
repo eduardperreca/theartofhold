@@ -22,3 +22,6 @@ Another important advantage is the prices offered to buyers. In a store, in fact
 
 ## Selling
 Third advantage to keep in mind regarding selling, in the sense that not all users go to the store to buy, but to sell. Even in this case, the bargaining power comes into play, which provides two options directly from the store: instant cash out or consignment sale. In the first case, the cash out is usually very low, reason why it does not make sense to sell in this way, and in the second case, the seller is guaranteed a higher percentage of the sale, but the time to receive the money is longer.
+
+## Extra Content: Wethenew - a 10M company
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Ebf6lwmSGWI/0.jpg)](https://www.youtube.com/watch?v=Ebf6lwmSGWI)i
