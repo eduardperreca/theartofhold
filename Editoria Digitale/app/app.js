@@ -27,6 +27,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
+  if (req.headers.cookie) {
+    let token = req.headers.cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        res.render("login");
+      } else {
+        res.redirect("/dashboard");
+      }
+    });
+  }
   res.render("login");
 });
 
@@ -100,9 +110,9 @@ app.post("/register", async (req, res) => {
 
       const questions = {
         chapter1: {
-          name: "chapter 1 - functions",
-          question: "What is the difference between a variable and a constant?",
-          answer: "A variable can be changed, a constant cannot.",
+          name: "Chapter 1 - Sneaker Game",
+          question: "What is the right mindset to have when you are starting out?",
+          answer: "The right mindset is proactive with regards to risk. You should be willing to take risks and learn from your mistakes.",
           solved: false,
           chapter_id: 1,
         },
@@ -153,7 +163,8 @@ app.post("/register", async (req, res) => {
 
 app.get("/dashboard", (req, res) => {
   let cookie = req.headers.cookie;
-  console.log(req.query);
+  let query = req.query;
+  console.log(query);
   if (cookie) {
     let token = cookie.split("=")[1];
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
@@ -163,13 +174,17 @@ app.get("/dashboard", (req, res) => {
         decoded = jwt.decode(token);
         id = decoded.refId;
         name = decoded.name;
-        questions = decoded.questions;
-        console.log("thats", questions);
-        if (req.query.loggedin == "true") {
-          return res.render("dash", { id, name, questions });
-        } else {
-          return res.render("dash", { id, name, questions });
-        }
+
+        User.find({ refId: id }, (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(user);
+            name = user[0].name;
+            questions = user[0].questions;
+            res.render("dash", { name, id, questions });
+          }
+        });
       }
     });
   } else {
@@ -201,12 +216,40 @@ app.get("/1/quiz", (req, res) => {
   }
 });
 
-app.post("/1/quiz", (req, res) => {
-  console.log(req.body)
-  const { fav_language } = req.body;
-  console.log(fav_language)
-  w
-  res.send("hello");
+app.post("/api/1/check", (req, res) => {
+  const { answer } = req.body;
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        question = questions.chapter1.question;
+        if (answer == questions.chapter1.answer) {
+          questions.chapter1.solved = true;
+          User.findOneAndUpdate(
+            { refId: id },
+            { questions: questions },
+            (err, doc) => {
+              if (err) {
+                console.log("Something wrong when updating data!");
+              }
+              console.log(doc, "updated");
+            }
+          );
+          res.redirect("/dashboard?done=true");
+        } else {
+          res.redirect("/1/quiz");
+        }
+      }
+    });
+  }
 });
 
 app.get("/2/quiz", (req, res) => {

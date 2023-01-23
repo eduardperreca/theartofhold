@@ -18,5 +18,5 @@ The online market, in conclusion, is the most balanced market in terms of prices
 ## Brief scheme
 ![dsds](https://mermaid.ink/img/pako:eNpNULlug0AQ_ZXRVIlk_wBFJIMdpUgky5RAMdodw8p7oD0KBPx7Fmg81WjeoTdvRuEkY4G9p3GA30drIc-leXAkpdl3cD5_LXUSgkN4Jq0nuCcvBgosFyg_fpyWyvZwJ-XD56EuNw1UczU4FxicZTDkXxzXA692z1vybmSyC1ybOjrPoXuHq0FZDrzArSmTfkGZppzmnXEx7JXYDL6bytmgemvYRtjNOjxhxg0pmb-bN12LcWDDLRZ5lTlQi61dM49SdPVkBRbRJz5hGiVFvirKpRgsnqRDvrJU2fjvqGtvbf0HNl9ppw?type=png)
 
-| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 2 |
+| WARNING: <a href="http://localhost:8080/2/quiz" target="_blank">Join our E-learning platform!</a> Quiz part 2 |
 | --- |

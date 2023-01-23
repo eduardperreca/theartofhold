@@ -19,5 +19,5 @@ An example of a recent event that had a major impact on sneaker prices was the s
 
 Sometimes, it takes much less to influence sneaker prices. For example, a few months ago, rapper Travis Scott posted a photo of himself wearing a pair of Dunk SB "Newcastle" on Instagram, which caused the sneaker's price to increase by 40% compared to its original price of $650. This is similar to what happened with Kanye West a few years ago, when he posted a
 
-| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 4 |
+| WARNING: <a href="http://localhost:8080/4/quiz" target="_blank">Join our E-learning platform!</a> Quiz part 4 |
 | --- |

@@ -35,5 +35,5 @@ At this point, there is only one thing to ask yourself, that is: "How is a shoe 
 
 The first factor to pay attention to is the market price which, thanks to the technology of our days and platforms such as StockX, Goat, and Kicks on Fire, is possible to understand in real-time. The second important factor is the rarity of the shoe, which can be understood by analyzing the production numbers. The third factor is the popularity of the shoe, which can be understood by analyzing the social media data.
 
-| WARNING: <a href="http://localhost:8080" target="_blank">Join our E-learning platform!</a> Quiz part 3 |
+| WARNING: <a href="http://localhost:8080/3/quiz" target="_blank">Join our E-learning platform!</a> Quiz part 3 |
 | --- |
