@@ -1,5 +1,7 @@
 # Italian Market
 
+![a](https://cdn.discordapp.com/attachments/633947157673672714/1067099738207420496/italy.png)
+
 ## Overview of the Italian Resell Market
 In Italy, the resell situation branches out through three main centers where the majority of members of this community gather: Milan, Rome, and Naples. Other smaller cities such as Bologna, Turin, Verona, Florence, and more are also not excluded. The choice of cities depends on the decisions of the multinationals themselves about where their points of sale will be located from which these special releases will be able to be witnessed.
 

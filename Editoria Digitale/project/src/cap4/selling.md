@@ -42,5 +42,8 @@ The Marketplace is a platform that allows the seller to sell the product to the 
 The purchase takes place directly with the seller, and the platform takes care of the rest.
 An example is StockX, a platform that allows you to buy and sell sneakers in a safe and reliable way.
 
+## Brief Idea
+![mermaid](https://mermaid.ink/img/pako:eNplkMFqwzAMhl9F-LRB-wI5DJZ03WArhOaY9CBspTF1omDLsJDk3ec2l43pJKTvF7_-WWk2pDJ19Th28HVuBkj1Wp9J0DryF9jvX5Yqak0htNG5CcrodYeBzAL50wc7Y4crlGh9eN7U-V0DxVx0zIGAB4IT-hvJ6FDTukHF43BOQaBkLy07ywsc6kpY374v_yGcOMoCb_U7o_zZHzHIb-RYfzq6yUXtVE--R2vSg_Nd0SjpqKdGZak1yVOjmmFNHEbhahq0ysRH2qk4GhQ6WEy59Cpr0YU0JWOF_WlL7BHc-gOW-Wqh?type=png)
+
 | In the next pages, we will see in more detail certain solutions for selling shoes on different platforms |
 | --- |

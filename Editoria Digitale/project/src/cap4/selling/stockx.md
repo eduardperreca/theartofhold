@@ -1,4 +1,5 @@
 # Stockx
+![](https://cdn.discordapp.com/attachments/633947157673672714/1067100799202775101/stockx.png)
 ## Introduction to StockX
 StockX is an online platform (both website and app), which is widely used by resellers and buyers. The platform was founded in 2015 in Detroit, America. In December 2020, it closed a Series E funding round of $275 million, which values the company at $2.8 billion post-money. StockX has millions of active users in almost 200 countries. The company conducts millions of dollars in transactions every day and manages thousands of products through its four authentication centers in the United States and Europe, which will soon host a fifth European detachment a few kilometers from Amsterdam. The team, which started with only four co-founders, now includes over 800 full-time and part-time employees.
 

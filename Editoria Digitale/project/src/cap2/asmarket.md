@@ -1,4 +1,5 @@
 # Asian Market
+![](https://media.discordapp.net/attachments/633947157673672714/1067099738429734983/Senza_titolo-1.png)
 ## Asian Market Growth
 In terms of the Asian market, it has seen an exponential growth in the last 20 years. This is because the purchasing power of Asian customers is pushing the foreign economy of luxury goods, and not just fashion.
 

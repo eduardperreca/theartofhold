@@ -1,5 +1,5 @@
 # European Market
-
+![](https://cdn.discordapp.com/attachments/633947157673672714/1067099833153892422/eu.png)
 ## Overview of the European Market
 In Europe, the market is almost unique. The motivation lies in the network, which has developed from this supranational organization in order to control the major fashion capitals, such as Paris, London, and Milan. In addition to the stores that release sneakers, they operate on a much wider landscape, which concerns both the clothing and accessory sectors, from Supreme to Palace, Bape and any limited edition item.
 
