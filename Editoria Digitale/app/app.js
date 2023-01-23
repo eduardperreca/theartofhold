@@ -211,25 +211,32 @@ app.post("/api/1/check", (req, res) => {
       } else {
         decoded = jwt.decode(token);
         id = decoded.refId;
-        name = decoded.name;
-        questions = decoded.questions;
-        question = questions.chapter1.question;
-        if (answer == questions.chapter1.answer) {
-          questions.chapter1.solved = true;
-          User.findOneAndUpdate(
-            { refId: id },
-            { questions: questions },
-            (err, doc) => {
-              if (err) {
-                console.log("Something wrong when updating data!");
-              }
-              console.log(doc, "updated");
+        User.find({ refId: id }, (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            user = user[0];
+            name = user.name;
+            questions = user.questions;
+            question = questions.chapter1.question;
+            if (answer == questions.chapter1.answer) {
+              questions.chapter1.solved = true;
+              User.findOneAndUpdate(
+                { refId: id },
+                { questions: questions },
+                (err, doc) => {
+                  if (err) {
+                    console.log("Something wrong when updating data!");
+                  }
+                  console.log(doc, "updated");
+                }
+              );
+              res.redirect("/dashboard?done=true");
+            } else {
+              res.redirect("/1/quiz");
             }
-          );
-          res.redirect("/dashboard?done=true");
-        } else {
-          res.redirect("/1/quiz");
-        }
+          }
+        });
       }
     });
   }
@@ -247,25 +254,32 @@ app.post("/api/2/check", (req, res) => {
       } else {
         decoded = jwt.decode(token);
         id = decoded.refId;
-        name = decoded.name;
-        questions = decoded.questions;
-        question = questions.chapter2.question;
-        if (answer == questions.chapter2.answer) {
-          questions.chapter1.solved = true;
-          User.findOneAndUpdate(
-            { refId: id },
-            { questions: questions },
-            (err, doc) => {
-              if (err) {
-                console.log("Something wrong when updating data!");
-              }
-              console.log(doc, "updated");
+        User.find({ refId: id }, (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            user = user[0];
+            name = user.name;
+            questions = user.questions;
+            question = questions.chapter2.question;
+            if (answer == questions.chapter2.answer) {
+              questions.chapter2.solved = true;
+              User.findOneAndUpdate(
+                { refId: id },
+                { questions: questions },
+                (err, doc) => {
+                  if (err) {
+                    console.log("Something wrong when updating data!");
+                  }
+                  console.log(doc, "updated");
+                }
+              );
+              res.redirect("/dashboard?done=true");
+            } else {
+              res.redirect("/2/quiz");
             }
-          );
-          res.redirect("/dashboard?done=true");
-        } else {
-          res.redirect("/1/quiz");
-        }
+          }
+        });
       }
     });
   }
@@ -283,30 +297,36 @@ app.post("/api/3/check", (req, res) => {
       } else {
         decoded = jwt.decode(token);
         id = decoded.refId;
-        name = decoded.name;
-        questions = decoded.questions;
-        question = questions.chapter3.question;
-        if (answer == questions.chapter3.answer) {
-          questions.chapter1.solved = true;
-          User.findOneAndUpdate(
-            { refId: id },
-            { questions: questions },
-            (err, doc) => {
-              if (err) {
-                console.log("Something wrong when updating data!");
-              }
-              console.log(doc, "updated");
+        User.find({ refId: id }, (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            user = user[0];
+            name = user.name;
+            questions = user.questions;
+            question = questions.chapter3.question;
+            if (answer == questions.chapter3.answer) {
+              questions.chapter3.solved = true;
+              User.findOneAndUpdate(
+                { refId: id },
+                { questions: questions },
+                (err, doc) => {
+                  if (err) {
+                    console.log("Something wrong when updating data!");
+                  }
+                  console.log(doc, "updated");
+                }
+              );
+              res.redirect("/dashboard?done=true");
+            } else {
+              res.redirect("/3/quiz");
             }
-          );
-          res.redirect("/dashboard?done=true");
-        } else {
-          res.redirect("/1/quiz");
-        }
+          }
+        });
       }
     });
   }
 });
-
 
 app.post("/api/4/check", (req, res) => {
   const { answer } = req.body;
@@ -320,25 +340,32 @@ app.post("/api/4/check", (req, res) => {
       } else {
         decoded = jwt.decode(token);
         id = decoded.refId;
-        name = decoded.name;
-        questions = decoded.questions;
-        question = questions.chapter4.question;
-        if (answer == questions.chapter4.answer) {
-          questions.chapter1.solved = true;
-          User.findOneAndUpdate(
-            { refId: id },
-            { questions: questions },
-            (err, doc) => {
-              if (err) {
-                console.log("Something wrong when updating data!");
-              }
-              console.log(doc, "updated");
+        User.find({ refId: id }, (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            user = user[0];
+            name = user.name;
+            questions = user.questions;
+            question = questions.chapter4.question;
+            if (answer == questions.chapter4.answer) {
+              questions.chapter4.solved = true;
+              User.findOneAndUpdate(
+                { refId: id },
+                { questions: questions },
+                (err, doc) => {
+                  if (err) {
+                    console.log("Something wrong when updating data!");
+                  }
+                  console.log(doc, "updated");
+                }
+              );
+              res.redirect("/dashboard?done=true");
+            } else {
+              res.redirect("/4/quiz");
             }
-          );
-          res.redirect("/dashboard?done=true");
-        } else {
-          res.redirect("/1/quiz");
-        }
+          }
+        });
       }
     });
   }
@@ -389,7 +416,8 @@ app.get("/2/quiz", (req, res) => {
     });
   } else {
     return res.redirect("/login");
-  }});
+  }
+});
 
 app.get("/3/quiz", (req, res) => {
   let cookie = req.headers.cookie;
@@ -412,7 +440,8 @@ app.get("/3/quiz", (req, res) => {
     });
   } else {
     return res.redirect("/login");
-  }});
+  }
+});
 
 app.get("/4/quiz", (req, res) => {
   let cookie = req.headers.cookie;
@@ -435,7 +464,8 @@ app.get("/4/quiz", (req, res) => {
     });
   } else {
     return res.redirect("/login");
-  }});
+  }
+});
 
 app.get("/logout", (req, res) => {
   res.clearCookie("token");
