@@ -178,19 +178,101 @@ app.get("/dashboard", (req, res) => {
 });
 
 app.get("/1/quiz", (req, res) => {
-  res.send("quiz");
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+        question = questions.chapter1.question;
+        answer = questions.chapter1.answer;
+        console.log("thats", question);
+        res.render("quiz1", { name, id, question, answer });
+      }
+    });
+  } else {
+    return res.redirect("/login");
+  }
+});
+
+app.post("/1/quiz", (req, res) => {
+  console.log(req.body)
+  const { fav_language } = req.body;
+  console.log(fav_language)
+  w
+  res.send("hello");
 });
 
 app.get("/2/quiz", (req, res) => {
-  res.send("quiz");
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+
+        res.render("quiz2", { name, id, questions });
+      }
+    });
+  } else {
+    return res.redirect("/login");
+  }
 });
 
 app.get("/3/quiz", (req, res) => {
-  res.send("quiz");
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+
+        res.render("quiz3", { name, id, questions });
+      }
+    });
+  } else {
+    return res.redirect("/login");
+  }
 });
 
 app.get("/4/quiz", (req, res) => {
-  res.send("quiz");
+  let cookie = req.headers.cookie;
+  console.log(req.query);
+  if (cookie) {
+    let token = cookie.split("=")[1];
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        return res.redirect("/login");
+      } else {
+        decoded = jwt.decode(token);
+        id = decoded.refId;
+        name = decoded.name;
+        questions = decoded.questions;
+
+        res.render("quiz4", { name, id, questions });
+      }
+    });
+  } else {
+    return res.redirect("/login");
+  }
 });
 
 app.get("/logout", (req, res) => {

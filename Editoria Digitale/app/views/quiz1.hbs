@@ -29,20 +29,32 @@
     <div class="container pd-60">
         <div class="row">
                 <div class="col-lg-12">
-                    <form action="">
-                        <button type="submit">submit here diocane!</button>
-                    </form>
+                        <div class="putainListing mt-5">
+                            <div class="row">
+                                <h1 class=" text-center title">{{question}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                <form method="POST" id="form">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                      <label for="html" class="subtitle">HTML</label><br>
+                      <input type="radio" id="css" name="fav_language" value="CSS">
+                      <label for="css" class="subtitle">CSS</label><br>
+                      <input type="radio" class="subtitle"r id="javascript" name="fav_language" value="{{answer}}">
+                      <label for="javascript" class="subtitle">{{answer}}</label>
+                    <button class="buttonForm" type="submit">Submit form</button>
+                </form>
                 </div>
             </div>       
         </div>
     </div>
 
-
-</body>
 <script>
     const dummy = document.getElementsByClassName('true');
     const count = dummy.length;
     const quiz = document.getElementById('quiz');
     quiz.innerHTML = "Quiz Passed: "+ count + "/4";
 </script>
+
+</body>
 </html>
