@@ -65,15 +65,43 @@ Per realizzare "The Art of Hold" sono state sviluppate le seguenti attività:
 
 ## Gestione documentale
 
-Descrivere il *flusso di gestione documentale* definito per il progetto. Ad esempio, la raccolta delle fonti, la revisione dei contenuti, la trasformazione dei formati, la strutturazione dei contenuti, la definizione dello stile grafico.
-> Il flusso può essere descritto utilizzando BPMN, lezione 5, slide 9. In alternativa, se si preferisce restare su un formato di puro testo è possibile usare il linguaggio Mermaid, supportato da alcuni editor Markdown. 
+Questo flusso di lavoro mostra i passaggi principali che ho seguito per sviluppare le informazioni per il libro:
+
+**Ricerca:**
+- raccolta di informazioni e dati sull'industria della rivendita di scarpe da ginnastica attraverso varie fonti come articoli online, rapporti di settore e interviste con esperti.
+
+**Analisi:** 
+- valutazione e interpretazione delle informazioni raccolte nella fase di ricerca.
+  
+**Outline:** 
+- organizzazione delle informazioni e creazione di una struttura per il libro.
+
+**Scrittura:**
+- utilizzo dell'outline per creare il contenuto del libro.
+
+**Editing:** 
+- revisione e rielaborazione del testo per migliorare la qualità e la coerenza del libro.
+
+**Revisione:** 
+- verifica del libro da parte di esperti del settore per garantire l'accuratezza e l'attualità delle informazioni.
+**Finalizzazione:**
+- preparazione del libro per la pubblicazione, inclusa la formattazione e la creazione della copertina.
+
+
+Questo **flusso** di **lavoro** mostra i passaggi principali necessari per sviluppare informazioni accurate e aggiornate per il libro sulla rivendita di scarpe da ginnastica.
 
 ```mermaid
 graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
+
+A[Ricerca] --> B[Prima Analisi]
+A --> C[Seconda Analisi]
+B --> D[Creazione Outliner]
 C --> D
+D --> E[Scrittura Bozza]
+E --> F[Editing]
+F --> G[Review]
+G --> H[Finalizzazione]
+
 ```
 
 ## Tecnologie adottate
@@ -95,14 +123,14 @@ Per lo sviluppo di "The Art of Hold" sono state utilizzate le seguenti tecnologi
 
 
 
-|                |Riduzione dei tempi di gestione                          |Miglioramento della qualità dei documenti                         |
+|                                          |Miglioramento della qualità dei documenti                         |
 |----------------|-------------------------------|-----------------------------|
-|Markdown |`'Isn't this fun?'`            |'Isn't this fun?'            |
-|HTML&CSS      |`"Isn't this fun?"`            |"Isn't this fun?"            |
-| JavaScript |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-| mdbook |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-| Video e Immagini |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-| Git |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+|Markdown |`Creare il contenuto del tuo libro in modo più veloce rispetto a utilizzare un programma di elaborazione testi come Microsoft Word, poiché non devi preoccuparti di formattare il testo.`            |'Isn't this fun?'            |
+|HTML&CSS      |`Creare un libro che sia bello da vedere e facile da leggere, il che rende l'esperienza del lettore più piacevole.`            |"Isn't this fun?"            |
+| JavaScript |`Può essere utilizzato per creare elementi interattivi all'interno del tuo libro, come quiz o mappe interattive. Ciò significa che puoi creare un libro che sia più coinvolgente e interattivo per i lettori, il che aumenta la loro motivazione a leggerlo.`|-- is en-dash, --- is em-dash|
+| mdbook |`mdbook è un generatore di libri scritto in Rust, che ti permette di creare libri utilizzando i file markdown, può aiutarti a creare un libro in modo più efficiente,in quanto ti consente di creare un libro completo utilizzando solo i file markdown, senza dover utilizzare altri programmi o linguaggi di marcatura. Ciò significa che puoi concentrarti esclusivamente sulla creazione del contenuto del tuo libro, senza dover preoccuparti di formattarlo o di creare un layout.`|-- is en-dash, --- is em-dash|
+| Video e Immagini |`l'uso di video e immagini all'interno del libro può rendere il contenuto più interessante e coinvolgente per i lettori. Ciò significa che puoi utilizzare questi elementi per spiegare concetti complessi in modo visivo e facile da comprendere, il che rende la lettura del libro più piacevole e più facile.`|-- is en-dash, --- is em-dash|
+| Git |`Lavorare su diversi aspetti del libro contemporaneamente, senza dover preoccupare di sovrascrivere le modifiche degli altri, dandoti una versione del libro sempre aggiornata.`|-- is en-dash, --- is em-dash|
 
 
 ## Conclusioni
@@ -124,18 +152,21 @@ I risultati ottenuti dal contenuto di "The Art of Hold" sono stati pienamente ra
 -   Per quanto riguarda la creazione di una webapp interattiva e user-friendly utilizzando mdbook, possiamo ritenere l'obiettivo soddisfatto, in quanto tramite la tencologia markdown integrata con mdbook, otteniamo un contenuto di facile mantenibilitá e progettazione, l'unico problema é l'integrazione di script lato markdown.
 
 ### Apprendimento
--   Per quanto riguarda il raggiungimento degli obiettivi di apprendimento del libro, per creare un'esperienza unica e particolare e fare sentire il lettore seguito, la modalitá di inclusione dell'esperienza dell'autore integrata con 
+-   Questo libro ha confermato in modo efficace gli obiettivi di apprendimento fornendo una comprensione completa della nicchia, compresi i vari mercati e le strategie in modo efficace. 
 ### Contenuti interattivi
--   Il problema che si potrebbe avere per quanto riguarda i contenuti interattivi sono molteplici, tra cui abbiamo la deprecabilitá dei contenuti, i diritti di essi (nonostante stiano all'interno del fair use)
+-   Il problema che si potrebbe avere per quanto riguarda i contenuti interattivi sono molteplici, tra cui abbiamo la deprecabilitá dei contenuti, i diritti di essi (nonostante stiano all'interno del fair use), ma nonostante questo la mantenibilitá del prodotto tramite la tecnologia sfruttata é alta.
 
 ## Futuri svolgimenti
-
-
-### Distribuzione del prodotto
--   In ottica di distribuzione del prodotto sarebbe ottimo stilare un piano per coordinare produttori e venditori 
-### Vendite
+I risultati ottenuti dal prodotto sono soddisfacenti ma assolutamente espansibili, vediamo come:
 
 ### Community
+In futuro, una implementazione sulla piattaforma potrebbe essere utilizzata per rafforzare e creare una comunità attorno al libro. La piattaforma potrebbe includere una funzione di leaderboard che consente ai lettori di competere tra loro, per vedere chi ha fatto il maggior numero di quiz correttamente, chi ha completato il libro in meno tempo o chi ha creato contenuti originali intorno al libro.
+In questo modo, si crea una competizione sana e stimolante che motiva i lettori a partecipare attivamente alla comunità, condividere le loro opinioni e contribuire al successo del libro. Inoltre, si può creare una funzione di socializzazione per permettere ai lettori di discutere tra di loro, creare gruppi di studio o di discussione, creare eventi online e cosi via. Tutto ciò rafforzerebbe il legame tra i lettori, aumenterebbe la loro partecipazione e contribuirebbe alla costruzione di una comunità attorno al libro.
 
 ## Bibliografia e sitografia
-
+Ecco citati alcuni soggetti all'interno della produzione scritta.
+[Art of The Hold](https://sneakerinvest.com/collections/art-of-the-hold)
+[Sneaker Invest](https://www.youtube.com/@sneakerinvest)
+[Klekt](https://www.klekt.com/)
+[StockX](https://stockx.com/it-it)
+[Wethenew](https://it.wethenew.com/)
