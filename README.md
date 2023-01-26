@@ -7,7 +7,9 @@
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 ## mdBook
 `cargo install mdbook`
-or
-## Homebrew
+
+#Installation via Brew
+## Installation
 `brew install rust`
+## mdbook
 `brew install mdbook`
