@@ -1,9 +1,9 @@
 # NodeJS Requirements
 `cd app`
 
-`npm i # Installation node dependences`
+`npm i`  # Installation node dependences
 
-`nodemon app.js # nodemon app run on port :8080`
+`nodemon app.js ` # nodemon app run on port :8080
 
 # Rust
 ## Installation
@@ -23,4 +23,4 @@
 ## Run mdbook server
 `cd project`
 
-`mdbook serve --open`
+`mdbook serve --open` # starting mdbook server on port :3000
