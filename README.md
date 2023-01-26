@@ -11,7 +11,7 @@
 ## mdBook
 `cargo install mdbook`
 
-otherwise
+**otherwise**
 
 # Installation via Brew
 ## Installation
