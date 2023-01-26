@@ -11,7 +11,9 @@
 ## mdBook
 `cargo install mdbook`
 
-#Installation via Brew
+otherwise
+
+# Installation via Brew
 ## Installation
 `brew install rust`
 ## mdbook
