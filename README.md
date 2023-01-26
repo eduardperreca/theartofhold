@@ -1,6 +1,9 @@
 # Requirements
-- npm i -> Node dependencies
-- nodemon app.js -> Server run on :8080
+`cd app`
+
+`npm i # Installation node dependences`
+
+`nodemon app.js # nodemon app run on port :8080`
 
 # Rust
 ## Installation
