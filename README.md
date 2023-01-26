@@ -14,6 +14,7 @@
 ## mdbook
 `brew install mdbook`
 
+# Starting mdbook
 ## Run mdbook server
 `cd project`
 
