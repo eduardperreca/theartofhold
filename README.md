@@ -13,3 +13,8 @@
 `brew install rust`
 ## mdbook
 `brew install mdbook`
+
+## Run mdbook server
+`cd project`
+
+`mdbook serve --open`
